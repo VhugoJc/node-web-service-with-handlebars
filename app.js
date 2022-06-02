@@ -1,11 +1,12 @@
-
+require('dotenv').config({path:__dirname+'/.env'})
 const express = require('express');
 const hbs = require('hbs');
 
+
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
-
+console.log(process.env.port);
 // handlebar para cuando no se usa react ni nada hacerlo semi dinamico y reutilizar codigo
 //handlebart utiliza vmc (Vista modelo compilador)
 hbs.registerPartials(__dirname + '/views/partials');
